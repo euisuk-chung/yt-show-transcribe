@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Transcript Auto Show",
+  "version": "1.0.0",
+  "description": "유튜브 영상의 스크립트를 자동으로 표시하는 확장 프로그램",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

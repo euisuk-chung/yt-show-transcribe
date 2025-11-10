@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Transcript Auto Show</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>YouTube Transcript</h1>
+      <p class="subtitle">스크립트 자동 표시</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">자동 표시</div>
+      <div class="toggle-container">
+        <label class="toggle-switch">
+          <input type="checkbox" id="autoShowToggle">
+          <span class="slider"></span>
+        </label>
+        <span class="status-text" id="statusText">활성화</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <div class="section-title">현재 페이지</div>
+      <button class="action-button" id="manualToggleBtn">
+        <span class="button-icon">📝</span>
+        <span class="button-text" id="toggleBtnText">스크립트 표시/숨김</span>
+      </button>
+      <div class="current-state" id="currentState">
+        <span class="state-indicator" id="stateIndicator">●</span>
+        <span id="stateText">상태 확인 중...</span>
+      </div>
+    </div>
+
+    <div class="info">
+      <p>✓ 자동 표시: 영상 페이지 접속 시 자동으로 스크립트 열기</p>
+      <p>✓ 수동 토글: 현재 페이지에서 스크립트 켜기/끄기</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
